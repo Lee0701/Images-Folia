@@ -6,6 +6,7 @@ description: ${project.description}
 website: ${project.url}
 softdepend: [ 'Multiverse-Core', 'PlotSquared', 'ProtocolLib' ]
 api-version: '1.13'
+folia-supported: true
 commands:
   image:
     description: 'Manage custom images.'
