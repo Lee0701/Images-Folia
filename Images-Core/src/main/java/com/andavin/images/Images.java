@@ -34,6 +34,7 @@ import com.andavin.util.LocationUtil;
 import com.andavin.util.Logger;
 import com.andavin.util.Scheduler;
 import com.andavin.util.TimeoutMetadata;
+import com.tcoded.folialib.FoliaLib;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -103,7 +104,7 @@ public class Images extends JavaPlugin implements Listener {
         Logger.initialize(this.getLogger());
         imagesDirectory = this.getDataFolder();
         PacketListener.getImages = () -> IMAGES;
-        setFieldValue(Scheduler.class, null, "instance", this);
+        setFieldValue(Scheduler.class, null, "foliaLib", new FoliaLib(this));
         setFieldValue(TimeoutMetadata.class, null, "instance", this);
     }
 
